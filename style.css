@@ -1,0 +1,91 @@
+#mapArea {
+  position: relative;
+  width: min(100vw, calc((100vh - 34px) * 1.5));
+  aspect-ratio: 3 / 2;
+  margin: 0 auto;
+}
+
+#worldMap {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.mapPin {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border: 2px solid white;
+  border-radius: 50% 50% 50% 0;
+  background: #ff3b30;
+  transform: translate(-50%, -100%) rotate(-45deg);
+  cursor: pointer;
+  z-index: 2;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
+}
+
+.mapPin::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  top: 4px;
+  left: 4px;
+  border-radius: 50%;
+  background: white;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#app {
+  position: relative;
+
+  width: 100vw;
+  height: 100vh;
+
+  overflow: hidden;
+}
+
+.screen {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  transition: transform 0.7s ease;
+}
+
+
+#mapScreen {
+  transform: translateX(0);
+}
+
+
+
+#storyScreen {
+  transform: translateX(100%);
+
+  background: white;
+
+  overflow-y: auto;
+}
+
+
+
+#app.story-open #mapScreen {
+  transform: translateX(-100%);
+}
+
+#app.story-open #storyScreen {
+  transform: translateX(0);
+}

@@ -1,0 +1,54 @@
+<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="app">
+
+    <section id="mapScreen" class="screen">
+
+      <div id="mapArea">
+        <img id="worldMap" src="./world_map.jpg" alt="World map">
+
+        <button
+          id="GeorgiaTap"
+          class="mapPin"
+          aria-label="Georgia"
+          style="top:40%; left:26%;">
+        </button>
+
+        <button
+          id="TexasTap"
+          class="mapPin"
+          aria-label="Texas"
+          style="top:50%; left:30%;">
+        </button>
+      </div>
+
+    </section>
+
+
+    <section id="storyScreen" class="screen">
+
+      <button id="backButton">← Back</button>
+
+      <h1 id="storyTitle"></h1>
+
+      <div id="storyContent"></div>
+
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+
+
+</html>
