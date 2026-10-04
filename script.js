@@ -1,38 +1,49 @@
 const app = document.getElementById("app");
 
 const georgiaPin = document.getElementById("GeorgiaTap");
-const texasPin = document.getElementById("TexasTap");
+const vietnamPin = document.getElementById("VietnamTap");
 
 const backButton = document.getElementById("backButton");
 
-const storyTitle = document.getElementById("storyTitle");
-const storyContent = document.getElementById("storyContent");
+const georgiaStory = document.getElementById("GeorgiaStory");
+const vietnamStory = document.getElementById("VietnamStory");
 
-georgiaPin.addEventListener("click", function () {
+const contactPlane = document.getElementById("ContactTap");
+const closeContact = document.getElementById("closeContact");
 
-  storyTitle.textContent = "Georgia";
 
-  storyContent.textContent =
-    "This is where my Georgia story will go.";
+function openStory(story) {
 
-  app.classList.add("story-open");
+  document.querySelectorAll(".story").forEach(function(item) {
+    item.classList.remove("active");
+  });
 
-});
-
-texasPin.addEventListener("click", function () {
-
-  storyTitle.textContent = "Texas";
-
-  storyContent.textContent =
-    "This is where my Texas story will go.";
+  story.classList.add("active");
 
   app.classList.add("story-open");
+}
 
+
+georgiaPin.addEventListener("click", function() {
+  openStory(georgiaStory);
 });
 
-backButton.addEventListener("click", function () {
 
+vietnamPin.addEventListener("click", function() {
+  openStory(vietnamStory);
+});
+
+
+backButton.addEventListener("click", function() {
   app.classList.remove("story-open");
-
 });
 
+
+contactPlane.addEventListener("click", function() {
+  app.classList.add("contact-open");
+});
+
+
+closeContact.addEventListener("click", function() {
+  app.classList.remove("contact-open");
+});
