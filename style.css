@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+
 #mapArea {
   position: relative;
   width: min(100vw, calc((100vh - 34px) * 1.5));
@@ -23,6 +26,23 @@
   cursor: pointer;
   z-index: 2;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
+}
+
+#maptitle {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    margin: 0;
+
+    font-family: "Orbitron", sans-serif;
+    font-size: 60px;
+    letter-spacing: 12px;
+
+    color: black;
+
+    z-index: 10;
 }
 
 .mapPin::after {
@@ -147,4 +167,56 @@ body {
 
 #app.contact-open #contactScreen {
   transform: translateY(0);
+}
+
+#storyScreen {
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.story {
+    max-width: 800px;
+    margin: auto;
+}
+
+.story h1 {
+    font-size: 40px;
+}
+
+.story p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.story img {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+}
+
+#backButton,
+#closeContact {
+    border: none;
+    background: none;
+
+    font-size: 18px;
+    cursor: pointer;
+
+    margin-bottom: 30px;
+}
+
+.contactContent {
+    padding: 50px;
+}
+
+.contactContent h1 {
+    font-size: 40px;
+}
+
+.contactContent p {
+    font-size: 18px;
+}
+
+.contactContent a {
+    font-size: 18px;
 }
