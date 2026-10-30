@@ -9,9 +9,9 @@ Click on locations to open stories about places that are important to me, or cli
 ## Preview
 
 <!-- Add a screenshot of the main map here -->
+Main Map
 
-![Main Map](<img width="1370" height="854" alt="image" src="https://github.com/user-attachments/assets/406d1bdc-bf02-4e9d-8b03-3a15be89a6df" />
-)
+<img width="1370" height="854" alt="image" src="https://github.com/user-attachments/assets/406d1bdc-bf02-4e9d-8b03-3a15be89a6df" />
 
 ---
 
